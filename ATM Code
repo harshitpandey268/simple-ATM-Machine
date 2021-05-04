@@ -1,0 +1,21 @@
+class ATM():
+    name = ""
+    balance = 0
+
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance =  balance
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print(f'Not Sufficient Balance to withdraw')
+            print(f'Your Current Balance is {self.balance}')
+        else:
+            self.balance = self.balance - amount
+            print(f'YOur Account Balance is {self.balance}')
+
+    def checkBalance(self):
+        print(f'Your account Balance is {self.balance}')
+
+a1 = ATM("Rahul", 5000)
+a1.withdraw(3000)
